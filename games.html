@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <meta name="description" content="This is an awesome website!">
+    <meta name="author" content="The genius">
+    <meta name="keywords" content="HTML, page, eternal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+    href = "../Project/games.css">
+  </head>
+  <body onload="time() , resize() , screensize()  " onresize="resize()">
+
+    <div class="bar1">
+      <div class="bar11">
+        <a id="firstbar" href="../Project/index.html">
+          <div class="barblock1" style="order:1";
+          flex-grow:0;flex-shrink:1;flex-basis:80px;
+          align-self:center>
+          Home</div></a>
+          <a id="firstbar" href="https://www.google.com/search?q=colour+picker&oq=colou&aqs=chrome.0.69i59j69i57j0l4j69i60l2.3099j0j9&sourceid=chrome&ie=UTF-8"
+          target="_blank">
+            <div class="barblock1" style="order:2";
+            flex-grow:0;flex-shrink:1;flex-basis:80px;
+            align-self:center>
+            Calendar</div></a>
+      </div>
+      <div class="bar12">
+        <a id="firstbar" href="http://www.google.com" target="_blank">
+          <div class="barblock1" style="order:4";
+          flex-grow:0;flex-shrink:1;flex-basis:80px;
+          align-self:center>
+          Google</div></a>
+          <a id="firstbar" href="http://www.plktytc.edu.hk" target="_blank">
+            <div class="barblock1" style="order:5";
+            flex-grow:0;flex-shrink:1;flex-basis:80px;
+            align-self:center>
+            TYT</div></a>
+          <a id="firstbar" href="#" target="_blank">
+            <div class="barblock1" style="order:6";
+            flex-grow:0;flex-shrink:1;flex-basis:80px;
+            align-self:center>
+            Codes</div></a>
+        </div>
+        <!-- Notes on FlexBox -->
+          <!-- flex-grow:[int]
+          default=0; the larger the flex-grow value,
+          the larger proportion of space the block gets.
+          the proportion is relative to the other
+          flex-grow value-->
+          <!-- flex-shrink:[int]
+          default value = 1; 0= do not shrink
+          the larger the flex-shrink value, the
+          larger the value shrinks when the window is too
+          small and exceed the flex-basis-->
+          <!-- flex-basis:[int]
+          the flex-basis is the smallest space a-
+          cell takes -->
+          <!-- align-self:align the thing verticlally:
+          flex-start=top,flex-end=bottom,center=center;
+          baseline=top,stretch=make the box as high
+          as the full height-->
+          <!-- Shorthand:
+          flex: 1 1 100px
+          where the format = grow shrink basis-->
+      </div>
+      <hr>
+      <a href="../Project/games.html"> <div class="grid-item-games">
+        <span id=grid-games-word>
+      Games</span></div></a>
+      <hr>
+
+      <!-- <div class="game1"> </div>
+      <hr>
+      <div>
+      <div style="background:rgba(255,255,255,0.5); width:90vw; height:90vw;"
+           onmousemove="startWriting(event)" onmouseup="stopWriting()">
+      </div>
+      <div id="coordinatesShowing" style="color:red;width:20vw;height:20vw">  </div>
+<script>
+function startWriting(event){
+  var coorx=event.clientX;
+  var coory=event.clientY;
+  document.getElementById("coordinatesShowing").innerHTML = "Coordinates:("+x+" , "+y+")" ;
+}
+function stopWriting(){
+  document.getElementById("coordinatesShowing").innerHTML ="";
+}
+</script>
+      <hr> -->
+
+<div id="newItems" style="font-size:4vw">
+  <table><tr><th><input type="email" id="inputByUsers" style="background-color:rgba(120,120,120,0.3);
+  color:yellow;font-size:4vw;height:5vw;width:40vw; padding-left:3px" >  </input></th>
+  <th><button onclick="textSubmitting()" style="background-color:rgba(120,120,120,1);
+               color:white;width:15vw;height:6vw;font-size:4vw" onmouseover="buttonColorHover()"
+               onmouseout="buttonColorHover2()"id="buttonInput">Submit</button></th></tr>
+  </table>
+<p>Your text will be shown below.</p>
+<p id="bottomText">Your text will be shown above.</p></div>
+
+<script>
+let input = document.getElementById("inputByUsers");
+input.addEventListener("keyup", ()=>{if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("buttonInput").click();
+}});
+function buttonColorHover(){
+  document.getElementById("buttonInput").style.backgroundColor = "rgba(120,120,120,0.3)";
+}
+function buttonColorHover2(){
+  document.getElementById("buttonInput").style.backgroundColor = "rgba(120,120,120,1)";
+}
+function textSubmitting(){
+const enteringText = document.getElementById("inputByUsers").value;
+if(enteringText != ""){
+const showingText = document.createElement("p");
+const node = document.createTextNode(">"+ enteringText);
+showingText.appendChild(node);
+var parent = document.getElementById("newItems");
+var child = document.getElementById("bottomText");
+parent.insertBefore(showingText,child);
+document.getElementById("inputByUsers").value = "";
+}}
+</script>
+
+  <hr>
+  <div>
+  <table style="border: 3px solid white; width:100%"><header><caption style="font-size:4vw;" >Blackjack 21!</caption></header>
+  <tr><td rowspan = "3";><div  style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);
+  background-size:contain;" id="playerside1">   </div></td>
+      <td rowspan = "3";><div  style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);
+      background-size:contain;" id="playerside2">   </div></td>
+      <td rowspan = "3";><div  style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);
+      background-size:contain;" id="playerside3">   </div></td>
+      <td rowspan = "3";><div  style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);
+      background-size:contain;" id="playerside4">   </div></td>
+      <td rowspan = "3";><div  style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);
+      background-size:contain;" id="playerside5">   </div></td>
+      <td><button onclick="newcarding()" id="newCardBtn" style="background-color:rgba(120,120,120,0.3);
+                   color:white;width:14vw;height:4vw;font-size:2.5vw" onmouseover="newcardColorHover()"
+                   onmouseout="newcardColorHover2()">NewCard! </td>
+  </tr>
+  <tr><td><button onclick="counting()" id="countCardBtn" style="background-color:rgba(120,120,120,0.3);
+               color:white;width:14vw;height:4vw;font-size:2.5vw" onmouseover="countColorHover()"
+               onmouseout="countColorHover2()">Count!</td>
+  </tr>
+  <tr><td><button onclick="reseting()" id="resetCardBtn" style="background-color:rgba(120,120,120,0.3);
+               color:white;width:14vw;height:4vw;font-size:2.5vw" onmouseover="resetColorHover()"
+               onmouseout="resetColorHover2()">Reset!</td>
+  </tr>
+  <tr><td colspan="5" style="font-size:4vw;">The number of cards are: <span id="coutarrayOfNum">[Press Count to get the sum!]</span></td>
+  </tr>
+  <tr><td colspan="5" style="font-size:4vw;">The sum is: <span id="coutsumOfNum">[Press Count to get the sum!]</span></td>
+  </tr>
+</table>
+<div style="background-image:url(https://cdn.shopify.com/s/files/1/1061/1924/products/10_grande.png?v=1571606116);
+width:40vw; height:40vw; background-size:contain; position:fixed; display:none; top:20vh; z-index:99;" id="oooops"> </div>
+</div>
+<div style="background-image:url(https://pyxis.nymag.com/v1/imgs/5d5/360/c37e550aeeb3127544d3aea284654eccf8.2x.rsocial.w600.jpg);
+width:50vw; height:25vw; background-size:contain; position:fixed; display:none; top:20vh; z-index:99;" id="21pts"> </div>
+</div>
+
+<script>
+var totalnumber = 0;
+var trialnumber = 0;
+var cardarray = [1];
+function newcarding(){
+  if (trialnumber<=4){
+  var newcard = Math.floor((Math.random() * 13) + 1);
+  // trialnumber++;
+  switch(trialnumber){
+    case 0:
+    switch (newcard){
+    case 1: document.getElementById("playerside1").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/71/96/spades-ace-playing-card-flat-icon-vector-19547196.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 2: document.getElementById("playerside1").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/63/06/poker-playing-card-2-spade-vector-8696306.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 3: document.getElementById("playerside1").style = "background-image:url(https://cdn1.vectorstock.com/i/1000x1000/63/55/poker-playing-card-3-spade-vector-8696355.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 4: document.getElementById("playerside1").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/63/92/poker-playing-card-4-spade-vector-8696392.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 5: document.getElementById("playerside1").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/64/22/poker-playing-card-5-spade-vector-8696422.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 6: document.getElementById("playerside1").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/65/16/poker-playing-card-6-spade-vector-8696516.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 7: document.getElementById("playerside1").style = "background-image:url(https://cdn5.vectorstock.com/i/1000x1000/65/49/poker-playing-card-7-spade-vector-8696549.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 8: document.getElementById("playerside1").style = "background-image:url(https://cdn5.vectorstock.com/i/1000x1000/67/19/poker-playing-card-8-spade-vector-8696719.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 9: document.getElementById("playerside1").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/67/61/poker-playing-card-9-spade-vector-8696761.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 10: document.getElementById("playerside1").style = "background-image:url(https://cdn1.vectorstock.com/i/1000x1000/68/00/poker-playing-card-10-spade-vector-8696800.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 11: document.getElementById("playerside1").style = "background-image:url(https://i.pinimg.com/originals/84/26/a8/8426a85599d61844da891ed7d42c3d8e.png);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 12: document.getElementById("playerside1").style = "background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Poker-sm-213-Qs.png/170px-Poker-sm-213-Qs.png);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+    case 13: document.getElementById("playerside1").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/73/47/poker-playing-card-king-club-vector-8697347.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+    break;
+  };break;
+    case 1:
+    switch (newcard){
+      case 1: document.getElementById("playerside2").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/71/96/spades-ace-playing-card-flat-icon-vector-19547196.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 2: document.getElementById("playerside2").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/63/06/poker-playing-card-2-spade-vector-8696306.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 3: document.getElementById("playerside2").style = "background-image:url(https://cdn1.vectorstock.com/i/1000x1000/63/55/poker-playing-card-3-spade-vector-8696355.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 4: document.getElementById("playerside2").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/63/92/poker-playing-card-4-spade-vector-8696392.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 5: document.getElementById("playerside2").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/64/22/poker-playing-card-5-spade-vector-8696422.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 6: document.getElementById("playerside2").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/65/16/poker-playing-card-6-spade-vector-8696516.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 7: document.getElementById("playerside2").style = "background-image:url(https://cdn5.vectorstock.com/i/1000x1000/65/49/poker-playing-card-7-spade-vector-8696549.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 8: document.getElementById("playerside2").style = "background-image:url(https://cdn5.vectorstock.com/i/1000x1000/67/19/poker-playing-card-8-spade-vector-8696719.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 9: document.getElementById("playerside2").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/67/61/poker-playing-card-9-spade-vector-8696761.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 10: document.getElementById("playerside2").style = "background-image:url(https://cdn1.vectorstock.com/i/1000x1000/68/00/poker-playing-card-10-spade-vector-8696800.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 11: document.getElementById("playerside2").style = "background-image:url(https://i.pinimg.com/originals/84/26/a8/8426a85599d61844da891ed7d42c3d8e.png);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 12: document.getElementById("playerside2").style = "background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Poker-sm-213-Qs.png/170px-Poker-sm-213-Qs.png);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 13: document.getElementById("playerside2").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/73/47/poker-playing-card-king-club-vector-8697347.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+    }break;
+    case 2:
+    switch (newcard){
+      case 1: document.getElementById("playerside3").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/71/96/spades-ace-playing-card-flat-icon-vector-19547196.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 2: document.getElementById("playerside3").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/63/06/poker-playing-card-2-spade-vector-8696306.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 3: document.getElementById("playerside3").style = "background-image:url(https://cdn1.vectorstock.com/i/1000x1000/63/55/poker-playing-card-3-spade-vector-8696355.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 4: document.getElementById("playerside3").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/63/92/poker-playing-card-4-spade-vector-8696392.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 5: document.getElementById("playerside3").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/64/22/poker-playing-card-5-spade-vector-8696422.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 6: document.getElementById("playerside3").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/65/16/poker-playing-card-6-spade-vector-8696516.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 7: document.getElementById("playerside3").style = "background-image:url(https://cdn5.vectorstock.com/i/1000x1000/65/49/poker-playing-card-7-spade-vector-8696549.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 8: document.getElementById("playerside3").style = "background-image:url(https://cdn5.vectorstock.com/i/1000x1000/67/19/poker-playing-card-8-spade-vector-8696719.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 9: document.getElementById("playerside3").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/67/61/poker-playing-card-9-spade-vector-8696761.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 10: document.getElementById("playerside3").style = "background-image:url(https://cdn1.vectorstock.com/i/1000x1000/68/00/poker-playing-card-10-spade-vector-8696800.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 11: document.getElementById("playerside3").style = "background-image:url(https://i.pinimg.com/originals/84/26/a8/8426a85599d61844da891ed7d42c3d8e.png);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 12: document.getElementById("playerside3").style = "background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Poker-sm-213-Qs.png/170px-Poker-sm-213-Qs.png);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 13: document.getElementById("playerside3").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/73/47/poker-playing-card-king-club-vector-8697347.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+    }break;
+    case 3:
+    switch (newcard){
+      case 1: document.getElementById("playerside4").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/71/96/spades-ace-playing-card-flat-icon-vector-19547196.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 2: document.getElementById("playerside4").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/63/06/poker-playing-card-2-spade-vector-8696306.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 3: document.getElementById("playerside4").style = "background-image:url(https://cdn1.vectorstock.com/i/1000x1000/63/55/poker-playing-card-3-spade-vector-8696355.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 4: document.getElementById("playerside4").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/63/92/poker-playing-card-4-spade-vector-8696392.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 5: document.getElementById("playerside4").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/64/22/poker-playing-card-5-spade-vector-8696422.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 6: document.getElementById("playerside4").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/65/16/poker-playing-card-6-spade-vector-8696516.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 7: document.getElementById("playerside4").style = "background-image:url(https://cdn5.vectorstock.com/i/1000x1000/65/49/poker-playing-card-7-spade-vector-8696549.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 8: document.getElementById("playerside4").style = "background-image:url(https://cdn5.vectorstock.com/i/1000x1000/67/19/poker-playing-card-8-spade-vector-8696719.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 9: document.getElementById("playerside4").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/67/61/poker-playing-card-9-spade-vector-8696761.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 10: document.getElementById("playerside4").style = "background-image:url(https://cdn1.vectorstock.com/i/1000x1000/68/00/poker-playing-card-10-spade-vector-8696800.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 11: document.getElementById("playerside4").style = "background-image:url(https://i.pinimg.com/originals/84/26/a8/8426a85599d61844da891ed7d42c3d8e.png);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 12: document.getElementById("playerside4").style = "background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Poker-sm-213-Qs.png/170px-Poker-sm-213-Qs.png);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 13: document.getElementById("playerside4").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/73/47/poker-playing-card-king-club-vector-8697347.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+    }break;
+    case 4:
+    switch (newcard){
+      case 1: document.getElementById("playerside5").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/71/96/spades-ace-playing-card-flat-icon-vector-19547196.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 2: document.getElementById("playerside5").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/63/06/poker-playing-card-2-spade-vector-8696306.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 3: document.getElementById("playerside5").style = "background-image:url(https://cdn1.vectorstock.com/i/1000x1000/63/55/poker-playing-card-3-spade-vector-8696355.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 4: document.getElementById("playerside5").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/63/92/poker-playing-card-4-spade-vector-8696392.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 5: document.getElementById("playerside5").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/64/22/poker-playing-card-5-spade-vector-8696422.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 6: document.getElementById("playerside5").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/65/16/poker-playing-card-6-spade-vector-8696516.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 7: document.getElementById("playerside5").style = "background-image:url(https://cdn5.vectorstock.com/i/1000x1000/65/49/poker-playing-card-7-spade-vector-8696549.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 8: document.getElementById("playerside5").style = "background-image:url(https://cdn5.vectorstock.com/i/1000x1000/67/19/poker-playing-card-8-spade-vector-8696719.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 9: document.getElementById("playerside5").style = "background-image:url(https://cdn2.vectorstock.com/i/1000x1000/67/61/poker-playing-card-9-spade-vector-8696761.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 10: document.getElementById("playerside5").style = "background-image:url(https://cdn1.vectorstock.com/i/1000x1000/68/00/poker-playing-card-10-spade-vector-8696800.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 11: document.getElementById("playerside5").style = "background-image:url(https://i.pinimg.com/originals/84/26/a8/8426a85599d61844da891ed7d42c3d8e.png);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 12: document.getElementById("playerside5").style = "background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Poker-sm-213-Qs.png/170px-Poker-sm-213-Qs.png);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+      case 13: document.getElementById("playerside5").style = "background-image:url(https://cdn3.vectorstock.com/i/1000x1000/73/47/poker-playing-card-king-club-vector-8697347.jpg);width:11vw; height:15vw;background-color:rgba(100,100,100,0);background-size:cover;background-position:center;border-radius:6px;"
+      break;
+    }break;
+  };
+  if (newcard >10){
+  cardarray.push(10);
+    totalnumber += 10;}else{
+    cardarray.push(newcard);
+      totalnumber += newcard;
+  }
+
+  trialnumber++;
+  if(trialnumber==5){document.getElementById("newCardBtn").innerHTML="[Max!]"}}else{}
+}
+function counting(){
+  cardarray2 = cardarray;
+  if (cardarray != []){
+    document.getElementById("coutarrayOfNum").innerHTML = cardarray;
+    if (cardarray.indexOf(1,0)=="-1"){
+        let reducer = (accumulator,currentValue)=> accumulator + currentValue;
+        var forchecking21pts = cardarray.reduce(reducer);
+        document.getElementById("coutsumOfNum").innerHTML = forchecking21pts;
+      }else{
+        var a=0;
+        for (i=-1;i<0;i=cardarray.find(1,i+1)) {
+          if (cardarray.find(1,i+1) > i){a++}else{i=-10}
+        }console.log(a)
+        var sumofthearray = 0;
+        for (i=0;i<trialnumber;i++){
+        sumofthearray += cardarray[i]
+        }
+        if (sumofthearray == 21){forchecking21pts = 21}else{
+        sumofthearray = sumofthearray -9
+          if ( sumofthearray == 21 ||a==1){forchecking21pts =sumofthearray}
+          else {sumofthearray-9
+            if(sumofthearray ==21 || a==2){forchecking21pts = sumofthearray}
+              else {sumofthearray-9
+              if (sumofthearray == 21 || a==3){forchecking21pts = sumofthearray}
+                else {sumofthearray - 9;
+                  if (sumofthearray == 21 || a==4){forchecking21pts=sumofthearray}
+                    else {forchecking21pts = sumofthearray-9}
+                }
+              }
+            }
+          }
+        }
+      }
+
+  if (forchecking21pts > 21 ){
+    ooops();
+  }else{
+    ohgood();
+  }
+}
+function reseting(){
+  cardarray = []
+  totalnumber = 0;
+  trialnumber= 0 ;
+  document.getElementById("playerside2").style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);background-size:contain;"
+  document.getElementById("playerside1").style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);background-size:contain;"
+  document.getElementById("playerside3").style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);background-size:contain;"
+  document.getElementById("playerside4").style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);background-size:contain;"
+  document.getElementById("playerside5").style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);background-size:contain;"
+  document.getElementById("newCardBtn").innerHTML="NewCard!";
+  setTimeout(()=>{document.getElementById("coutarrayOfNum").innerHTML = ""} , 1500);
+  setTimeout(()=>{document.getElementById("coutsumOfNum").innerHTML = "" } ,1500);
+}
+var noDoubleclick = 1;
+function ooops (){
+  if (noDoubleclick ==1){
+  noDoubleclick = 0;
+  document.getElementById("oooops").style.display = "inline" ;
+  var element = document.getElementById("oooops");
+  var position = 0;
+  var animationloop = setInterval(()=>{
+    if (position >= 100){
+      clearInterval(animationloop);
+      element.style.left = 0 + "px";
+      noDoubleclick = 1;
+      element.style.display = "none";}else{
+      position++;
+      element.style.left = position + "vw"
+    }
+  },15)
+}
+}
+  function ohgood (){
+    document.getElementById("21pts").style.display = "inline" ;
+    var element = document.getElementById("21pts");
+    var position = 0;
+    var animationloop = setInterval(()=>{
+      if (position >= 100){
+        clearInterval(animationloop);
+        element.style.display = "none";}else{
+        position++;
+        element.style.left = position + "vw"
+      }
+    },15)
+}
+function newcardColorHover(){
+  document.getElementById("newCardBtn").style.backgroundColor = "rgba(120,120,120,1)";
+}
+function newcardColorHover2(){
+  document.getElementById("newCardBtn").style.backgroundColor = "rgba(120,120,120,0.3)";
+}
+function countColorHover(){
+  document.getElementById("countCardBtn").style.backgroundColor = "rgba(120,120,120,1)";
+}
+function countColorHover2(){
+  document.getElementById("countCardBtn").style.backgroundColor = "rgba(120,120,120,0.3)";
+}
+function resetColorHover(){
+  document.getElementById("resetCardBtn").style.backgroundColor = "rgba(120,120,120,1)";
+}
+function resetColorHover2(){
+  document.getElementById("resetCardBtn").style.backgroundColor = "rgba(120,120,120,0.3)";
+}
+</script>
+  <hr>
+
+  <table><tr><th style="padding-right:50vw">
+      <div id="showingbutton" style="background-color:yellow; color:blue;
+      width:20vw; height:8vw; font-size:5vw;text-align:center;" onclick="changingwords()" >Click me!</div></th>
+      <th><div id="bombbutton" style="background-color:yellow; color:black;
+      width:20vw; height:8vw; font-size:5vw;text-align:center;" onclick="changingwords2()" >I'm a bomb</div></th></tr></table>
+
+<div id="bombaimage" style="background:url(https://i1.wp.com/asiatimes.com/wp-content/uploads/2017/09/Atomic-Bomb-e1577489338694.jpg);
+position:fixed ; bottom:10vw;right:0vw ;width:99vw;height:57vw;background-size:contain;z-index:99;border: 3px solid white;display:none;"> </div>
+<script>
+  function changingwords (){ console.log("changingwords");
+    switch(document.getElementById("showingbutton").innerHTML){
+  case "Thank You!":document.getElementById("showingbutton").innerHTML = "Enough!"
+  break;
+  case "Click me!": document.getElementById("showingbutton").innerHTML = "Thank You!"
+  break;
+  case "Enough!":document.getElementById("showingbutton").innerHTML = "Bye Bye!"
+  break;
+  case "Bye Bye!":document.getElementById("showingbutton").innerHTML = "";
+  document.getElementById("showingbutton").style = "background-color:black"
+  break;
+}}</script>
+<script>
+  function changingwords2 (){  console.log("changingwords2");switch(document.getElementById("bombbutton").innerHTML){
+  case "I'm a bomb":document.getElementById("bombbutton").innerHTML = "Behave yrself!";
+  document.getElementById("bombbutton").style = "font-size:3.5vw; background-color:yellow ; color:black; width:20vw; height:8vw; text-align:center; line-height:8vw";
+  break;
+  case "Behave yrself!": document.getElementById("bombbutton").innerHTML = "Explosion?";
+  document.getElementById("bombbutton").style = "font-size:5vw; background-color:yellow ; color:black; width:20vw; height:8vw; text-align:center; line-height:8vw";
+
+  break;
+  case "Explosion?":document.getElementById("bombbutton").innerHTML = "How dare you!";
+  document.getElementById("bombbutton").style = "font-size:3.5vw; background-color:yellow ; color:black; width:20vw; height:8vw; text-align:center; line-height:8vw";
+  break;
+  case "How dare you!":document.getElementById("bombbutton").innerHTML = "";
+  document.getElementById("bombbutton").style = "background-color:black;";
+  document.getElementById("bombaimage").style = "background:url(https://i1.wp.com/asiatimes.com/wp-content/uploads/2017/09/Atomic-Bomb-e1577489338694.jpg); position:fixed ; bottom:10vw;right:0vw ;width:99vw;height:57vw;background-size:contain;z-index:99;border: 3px solid white;display:inline;";
+  var bombbing = setTimeout(()=>{window.location.href = "../Project/index.html"},1000);
+  break;
+}}
+
+</script>
+      <hr>
+      <div>
+        <table id="pageendtable">
+          <tr id="pageend"><th>The time now is <span id="date">  </span></th>
+              <!-- <th><button id="date-refreshing" type="button"
+               onclick="document.getElementById('date').innerHTML = Date()">
+               Refresh Date and Time</button> -->
+             </tr>
+          <tr><td colspan="2" rowspan="1" id="websiteURL">Loading</td></tr>
+        </table>
+    </div>
+    <hr>
+      <div>
+        <table style="color:rgb(120,120,120)">
+          <tr><td colspan="2" rowspan="1">Data for nerds:</td></tr>
+          <tr><td colspan="2" rowspan="1" id="pagesize">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="screensize">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="availscreensize">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="colorDepth">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="pixelDepth">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="cookieEnabled">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserName">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserCodeName">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserVersion">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserPlatform">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserLanguage">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserJava">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" onclick="opencpp()">Getting the raw program of differentiation in C++(Click here)</td></tr>
+        </table>
+      </div>
+    <script>
+    function time(){window.setInterval(()=>document.getElementById('date').innerHTML = Date(),1000)};
+    // function byemsg(){window.alert("Stay Healthy and Stay Wealthy!")};
+    </script>
+    <script>
+    function resize(){
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    document.getElementById("pagesize").innerHTML = "Webpage inner-width = "+ w +
+    " | inner-height = " + h +".";}
+
+    function screensize(){
+      document.getElementById("screensize").innerHTML =
+      "Screen-width = " + screen.width +" | Screen-height = " + screen.height +".";
+      document.getElementById("availscreensize").innerHTML =
+      "Screen-available-width = " + screen.availWidth +" | Screen-available-height = " + screen.availHeight +".";
+      document.getElementById("colorDepth").innerHTML ="Screen-Color-Depth: " + screen.colorDepth;
+      document.getElementById("pixelDepth").innerHTML ="Screen-Pixel-Depth: " + screen.pixelDepth;
+      document.getElementById("websiteURL").innerHTML = "Page location is " + window.location.href;
+      document.getElementById("cookieEnabled").innerHTML ="Cookies-enabled is " + navigator.cookieEnabled;
+      document.getElementById("browserName").innerHTML ="Your Browser is " + navigator.appName;
+      document.getElementById("browserCodeName").innerHTML ="Your browser code-name  is " + navigator.appCodeName;
+      document.getElementById("browserVersion").innerHTML = "Your browser version is "+navigator.appVersion;
+      document.getElementById("browserPlatform").innerHTML = "Your operating system is " + navigator.platform;
+      document.getElementById("browserLanguage").innerHTML = "Your language is "+ navigator.language;
+      document.getElementById("browserJava").innerHTML = "Is java enabled? "+ navigator.javaEnabled();
+    }
+    function opencpp(){
+      if(window.confirm("You may copy the C++ code and paste it in any compiler for running.")){
+      // window.location.assign("../Project/differentiation.cpp");
+      window.open("../Project/differentiation.cpp");}
+      else{}
+      // window.close();
+      // window.moveTo();
+      // window.resizeTo();
+    }
+    </script>
+</body>
+</html>

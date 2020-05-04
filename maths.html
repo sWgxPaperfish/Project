@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <meta charset = "UTF-8">
+    <meta name="description" content="This is an awesome website!">
+    <meta name="author" content="The genius">
+    <meta name="keywords" content="HTML, page, eternal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+    href = "../Project/maths.css">
+  </header>
+  <body>
+    <div class="bar1">
+      <div class="bar11">
+        <a id="firstbar" href="../Project/index.html">
+          <div class="barblock1" style="order:1";
+          flex-grow:0;flex-shrink:1;flex-basis:80px;
+          align-self:center>
+          Home</div></a>
+          <a id="firstbar" href="https://www.google.com/search?q=colour+picker&oq=colou&aqs=chrome.0.69i59j69i57j0l4j69i60l2.3099j0j9&sourceid=chrome&ie=UTF-8"
+          target="_blank">
+            <div class="barblock1" style="order:2";
+            flex-grow:0;flex-shrink:1;flex-basis:80px;
+            align-self:center>
+            Calendar</div></a>
+      </div>
+      <div class="bar12">
+        <a id="firstbar" href="http://www.google.com" target="_blank">
+          <div class="barblock1" style="order:4";
+          flex-grow:0;flex-shrink:1;flex-basis:80px;
+          align-self:center>
+          Google</div></a>
+          <a id="firstbar" href="http://www.plktytc.edu.hk" target="_blank">
+            <div class="barblock1" style="order:5";
+            flex-grow:0;flex-shrink:1;flex-basis:80px;
+            align-self:center>
+            TYT</div></a>
+          <a id="firstbar" href="#" target="_blank">
+            <div class="barblock1" style="order:6";
+            flex-grow:0;flex-shrink:1;flex-basis:80px;
+            align-self:center>
+            Codes</div></a>
+        </div>
+        <!-- Notes on FlexBox -->
+          <!-- flex-grow:[int]
+          default=0; the larger the flex-grow value,
+          the larger proportion of space the block gets.
+          the proportion is relative to the other
+          flex-grow value-->
+          <!-- flex-shrink:[int]
+          default value = 1; 0= do not shrink
+          the larger the flex-shrink value, the
+          larger the value shrinks when the window is too
+          small and exceed the flex-basis-->
+          <!-- flex-basis:[int]
+          the flex-basis is the smallest space a-
+          cell takes -->
+          <!-- align-self:align the thing verticlally:
+          flex-start=top,flex-end=bottom,center=center;
+          baseline=top,stretch=make the box as high
+          as the full height-->
+          <!-- Shorthand:
+          flex: 1 1 100px
+          where the format = grow shrink basis-->
+      </div>
+<hr>
+<div></div>
+<script>
+
+   window.addEventListener("load",fx);
+</script>
+<hr>
+      <div>
+        <table id="page5-table">
+          <thead>
+            <caption><h2 id="page5-headline">For the genius Webpage Developer</h2></caption></thead>
+          <tbody>
+            <tr><th>Username</th>
+            <th><input type="email"></th>
+            <tr><th>Password</th>
+            <th><input type="password"></th>
+            <th><button id="page5-button" onclick="button()">Verify</th></tr>
+          </tbody>
+        </table>
+        <span id="page5-password">Please Enter the UserName and Password</span>
+
+      <script>
+      function button(){
+        document.getElementById("page5-password").innerHTML = "Invalid Username or Password";
+      }
+      </script>
+      </div>
+        <hr>
+        <!-- <br>
+        <iframe src="../Project/differentiation.cpp" id="page6-cpp"></iframe>
+        <hr> -->
+        <div><script>
+        document.write("You visited this website at "+Date());
+        </script></div>
+    </body>
+    </html>

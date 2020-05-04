@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+    <meta name="description" content="This is an awesome website!">
+    <meta name="author" content="The genius">
+    <meta name="keywords" content="HTML, page, eternal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+    href = "../Project/programming.css">
+  </head>
+  <body onload="time() , resize() , screensize()  " onresize="resize()">
+
+    <div class="bar1">
+      <div class="bar11">
+        <a id="firstbar" href="../Project/index.html">
+          <div class="barblock1" style="order:1";
+          flex-grow:0;flex-shrink:1;flex-basis:80px;
+          align-self:center>
+          Home</div></a>
+          <a id="firstbar" href="https://www.google.com/search?q=colour+picker&oq=colou&aqs=chrome.0.69i59j69i57j0l4j69i60l2.3099j0j9&sourceid=chrome&ie=UTF-8"
+          target="_blank">
+            <div class="barblock1" style="order:2";
+            flex-grow:0;flex-shrink:1;flex-basis:80px;
+            align-self:center>
+            Calendar</div></a>
+      </div>
+      <div class="bar12">
+        <a id="firstbar" href="http://www.google.com" target="_blank">
+          <div class="barblock1" style="order:4";
+          flex-grow:0;flex-shrink:1;flex-basis:80px;
+          align-self:center>
+          Google</div></a>
+          <a id="firstbar" href="http://www.plktytc.edu.hk" target="_blank">
+            <div class="barblock1" style="order:5";
+            flex-grow:0;flex-shrink:1;flex-basis:80px;
+            align-self:center>
+            TYT</div></a>
+          <a id="firstbar" href="#" target="_blank">
+            <div class="barblock1" style="order:6";
+            flex-grow:0;flex-shrink:1;flex-basis:80px;
+            align-self:center>
+            Codes</div></a>
+        </div>
+        <!-- Notes on FlexBox -->
+          <!-- flex-grow:[int]
+          default=0; the larger the flex-grow value,
+          the larger proportion of space the block gets.
+          the proportion is relative to the other
+          flex-grow value-->
+          <!-- flex-shrink:[int]
+          default value = 1; 0= do not shrink
+          the larger the flex-shrink value, the
+          larger the value shrinks when the window is too
+          small and exceed the flex-basis-->
+          <!-- flex-basis:[int]
+          the flex-basis is the smallest space a-
+          cell takes -->
+          <!-- align-self:align the thing verticlally:
+          flex-start=top,flex-end=bottom,center=center;
+          baseline=top,stretch=make the box as high
+          as the full height-->
+          <!-- Shorthand:
+          flex: 1 1 100px
+          where the format = grow shrink basis-->
+      </div>
+      <hr>
+      <div style="font-size:5vw;">Output Methods</div>
+      <div class="container1">
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >int a=10;<br>cout &lt;&lt;a&lt;&lt;endl<br>‏‏‎‏‏‎ ‎</div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://img.favpng.com/14/13/10/the-c-programming-language-computer-programming-computer-icons-png-favpng-7zJYitnyi8SgchmgBAFa14561.jpg)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >int a=10;<br>printf("%d",&a);<br>‏‏‎ ‎</div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/C_Sharp_logo.svg/1200px-C_Sharp_logo.svg.png)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >int a=10;<br>Console.WriteLine(a);<br>Console.Write(a);</div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://f1.pngfuel.com/png/951/574/485/react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-png-clip-art.png)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >let a=10;<br>document.getElementById("").innerHTML=a;<br>‏‏‎ ‎</div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(data:image/png;base64,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)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >int a=10;<br> System.out.println(a);<br>‏‏‎ ‎</div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://www.php.net/images/logos/new-php-logo.svg)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >$a=10;<br>echo $a;<br>‏‏‎ ‎</div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/1280px-Python_logo_and_wordmark.svg.png)
+        ;background-size:cover;flex:1 1 30px;border:3px double white;padding:2px;"
+        >a=10<br>print(a)<br>‏‏‎ ‎</div>
+      </div>
+
+      <div style="font-size:5vw;">Input Methods</div>
+      <div class="container1">
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >int a;<br>cin>>a;<br>‏‏‎‏‏‎ ‎<br>‏‏‎‏‏‎ </div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://img.favpng.com/14/13/10/the-c-programming-language-computer-programming-computer-icons-png-favpng-7zJYitnyi8SgchmgBAFa14561.jpg)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >int a;<br>scanf("%d",&a);<br>‏‏‎ ‎<br>‏‏‎‏‏‎ </div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/C_Sharp_logo.svg/1200px-C_Sharp_logo.svg.png)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >string input=Console.ReadLine();<br>int b=Convert.ToInt32(input);<br>‏‏‎‏‏‎ <br>‏‏‎‏‏‎ </div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://f1.pngfuel.com/png/951/574/485/react-logo-javascript-redux-vuejs-angular-angularjs-expressjs-front-and-back-ends-png-clip-art.png)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >a=document.getElementById("").innerHTML;<br>‏‏‎‏‏‎ <br>‏‏‎‏‏‎ <br>‏‏‎ ‎</div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(data:image/png;base64,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)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >Scanner sc=new Scanner(System.in);<br>String b=sc.nextLine();<br>‏‏‎int b=sc.nextInt();‎</div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://www.php.net/images/logos/new-php-logo.svg)
+        ;background-size:contain;flex:1 1 30px;border:3px double white;padding:2px;"
+        >$_GET["id"];<br>$_POST["id"]‏‏<br>‎ ‎<br>‏‏‎‏‏‎ </div>
+        <div style="background-image:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/1280px-Python_logo_and_wordmark.svg.png)
+        ;background-size:cover;flex:1 1 30px;border:3px double white;padding:2px;"
+        >a=input("Enter sth")<br>‏‏‎ <br>‏‏‎‏‏‎ ‎<br>‏‏‎‏‏‎ </div>
+      </div>
+
+
+
+      <hr>
+      <div>
+        <table id="pageendtable">
+          <tr id="pageend"><th>The time now is <span id="date">  </span></th>
+              <!-- <th><button id="date-refreshing" type="button"
+               onclick="document.getElementById('date').innerHTML = Date()">
+               Refresh Date and Time</button> -->
+             </tr>
+          <tr><td colspan="2" rowspan="1" id="websiteURL">Loading</td></tr>
+        </table>
+    </div>
+    <hr>
+      <div>
+        <table style="color:rgb(120,120,120)">
+          <tr><td colspan="2" rowspan="1">Data for nerds:</td></tr>
+          <tr><td colspan="2" rowspan="1" id="pagesize">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="screensize">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="availscreensize">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="colorDepth">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="pixelDepth">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="cookieEnabled">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserName">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserCodeName">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserVersion">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserPlatform">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserLanguage">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" id="browserJava">Loading</td></tr>
+          <tr><td colspan="2" rowspan="1" onclick="opencpp()">Getting the raw program of differentiation in C++(Click here)</td></tr>
+        </table>
+      </div>
+    <script>
+    function time(){window.setInterval(()=>document.getElementById('date').innerHTML = Date(),1000)};
+    // function byemsg(){window.alert("Stay Healthy and Stay Wealthy!")};
+    </script>
+    <script>
+    function resize(){
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    document.getElementById("pagesize").innerHTML = "Webpage inner-width = "+ w +
+    " | inner-height = " + h +".";}
+
+    function screensize(){
+      document.getElementById("screensize").innerHTML =
+      "Screen-width = " + screen.width +" | Screen-height = " + screen.height +".";
+      document.getElementById("availscreensize").innerHTML =
+      "Screen-available-width = " + screen.availWidth +" | Screen-available-height = " + screen.availHeight +".";
+      document.getElementById("colorDepth").innerHTML ="Screen-Color-Depth: " + screen.colorDepth;
+      document.getElementById("pixelDepth").innerHTML ="Screen-Pixel-Depth: " + screen.pixelDepth;
+      document.getElementById("websiteURL").innerHTML = "Page location is " + window.location.href;
+      document.getElementById("cookieEnabled").innerHTML ="Cookies-enabled is " + navigator.cookieEnabled;
+      document.getElementById("browserName").innerHTML ="Your Browser is " + navigator.appName;
+      document.getElementById("browserCodeName").innerHTML ="Your browser code-name  is " + navigator.appCodeName;
+      document.getElementById("browserVersion").innerHTML = "Your browser version is "+navigator.appVersion;
+      document.getElementById("browserPlatform").innerHTML = "Your operating system is " + navigator.platform;
+      document.getElementById("browserLanguage").innerHTML = "Your language is "+ navigator.language;
+      document.getElementById("browserJava").innerHTML = "Is java enabled? "+ navigator.javaEnabled();
+    }
+    function opencpp(){
+      if(window.confirm("You may copy the C++ code and paste it in any compiler for running.")){
+      // window.location.assign("../Project/differentiation.cpp");
+      window.open("../Project/differentiation.cpp");}
+      else{}
+      // window.close();
+      // window.moveTo();
+      // window.resizeTo();
+    }
+    </script>
+</body>
+</html>
