@@ -1,0 +1,211 @@
+body{
+	background:rgb(0,0,0);
+	color:white;
+	font-family: 'PT Sans Narrow', sans-serif;}
+#firstbar{
+	text-decoration: none;
+	color:white;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;}
+.bar1{
+	background-color:rgb(33, 34, 36);
+	margin:0px;
+	border:1px;
+	width:100vw;
+	height:60px;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;
+
+	display:flex;
+	flex-direction: row;
+	flex-wrap:nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	/*先定義框(color,margin)*/
+	/*再定義flexbox*/
+	/*-webkit-transition:transform,2s 
+	ease 0.1s;
+	-moz-transition:transform,2s 
+	ease 0.1s;*/}
+.bar1:hover{
+	/*transform:scale(
+		1.05);*/}
+.bar11{
+	background-color:rgb(33, 34, 36);
+	margin:0px;
+	border:1px;
+	width:100vw;
+	height:60px;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;
+
+	display:flex;
+	flex-direction: row;
+	flex-wrap:nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;}
+.bar12{
+	background-color:rgb(33, 34, 36);
+	margin:0px;
+	border:1px;
+	width:100vw;
+	height:60px;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;
+
+	display:flex;
+	flex-direction: row;
+	flex-wrap:nowrap;
+	justify-content: space-between;
+	align-items: flex-end;}
+.barblock1{
+	background: rgb(59, 62, 69);
+	color:white;
+	font-size:27px;
+	text-align:center;
+	width:15vw;
+	line-height:50px;
+	margin:5px;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;
+
+	-webkit-transition:transform,2s 
+	ease 0.1s;
+	-moz-transition:transform,2s 
+	ease 0.1s;}
+.barblock1:hover{
+	transform:scale(
+		1.05);}
+.barblock2{
+	background: rgb(33, 34, 36);
+	color:white;
+	font-size:30px;
+	text-align:center;
+	width:1px;
+	line-height:50px;
+	margin:1px;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;
+
+	-webkit-transition:transform,2s 
+	ease 0.1s;
+	-moz-transition:transform,2s 
+	ease 0.1s;}
+.barblock2:hover{
+	transform:scale(
+		1.05);}
+#barline{
+	position:-webkit-fixed;
+	position:fixed; 
+	z-index: 99;
+	top:64px;
+	width:100vw;
+	border:1px solid white;}
+#page5-table{
+	width:
+	400px;}
+#page5-headline{
+	text-decoration: 
+	underline;}
+#page5-button{
+	background-color: rgb(60,60,60);
+	color:white;
+	padding: 3px 5px;
+	border: 3px double rgb(255,255,255);}
+#page5-button:hover{
+	background-color:rgb(
+		40,40,40);}
+#page5-button:active{
+	background-color:rgb(250,40,40);
+	padding: 5px 7px;}
+#page6-cpp{
+	color:white;
+	width:90vw;}
+.grid-item-games{
+	background-image:linear-gradient(rgba(0,0,0,0.7),
+	rgba(0,0,0,0.4)),url(https://media1.giphy.com/media/LUl2tRY5oVlBu/source.gif);
+	background-repeat: no-repeat;
+    background-size:cover;
+    grid-column: 1;
+    grid-row:4;
+	font-size:30vw;
+	text-align:center;
+	width:100vw;
+	height:100vw;
+
+	line-height: 100vw;
+
+	margin:0vw 0vw 0vw 0vw;
+	padding:0px 0px 0px 0px;
+	border: 3px solid rgba(157, 3, 252,0.7);
+
+	-webkit-transition:transform,0.5s 
+	ease 0.1s;
+	-moz-transition:transform,0.5s 
+	ease 0.1s;}
+/*.grid-item-games:hover{
+	transform:scale(
+		1.1);}*/
+#grid-games-word{
+	/*background-color:white;*/
+	background-image:linear-gradient(45deg,
+	rgba(129, 141, 166,1),rgba(129, 141, 166,0.1),
+	rgba(129, 141, 166,1));
+	background-size:100%
+	background-repeat:repeat;
+	font-weight:800;
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+	-moz-background-clip:text;
+	-moz-text-fill-color:transparent;
+	text-shadow: 1px 1px 1px white; }
+a:link{
+	text-decoration: 
+	none}
+a:visited {
+  text-decoration: 
+  none;}
+a:hover {
+	text-decoration: 
+  none}
+a:active {
+  text-decoration: 
+  none;}
+ .game1{
+ 	border: 3px solid white;
+ 	/*content: "\200B";*/
+ 	/*background-image: url(https://ak8.picdn.net/shutterstock/videos/30482518/thumb/1.jpg);
+ */	background-repeat: no-repeat;
+ 	background-size:contain;
+ 	width:20vw;
+ 	height:40vw;
+ 	border: 2vw 2vw 2vw 2vw;
+ 	padding: 8vw;
+ 	-webkit-animation: switch 1s linear 0.1s infinite alternate;
+
+ }
+
+}
+ @-webkit-keyframes switch{
+ 	0%{background:url(https://ak5.picdn.net/shutterstock/videos/30482065/thumb/1.jpg);
+ 	/*background-repeat: no-repeat;
+ 	background-size:contain;*/}
+ 	50%{/*background-repeat: no-repeat;
+ 	background-size:contain;*/
+ 	background: url(https://ak1.picdn.net/shutterstock/videos/30504241/thumb/1.jpg);}
+	100%{/*background-repeat: no-repeat;
+ 	background-size:contain;*/
+ 	background: url(https://ak8.picdn.net/shutterstock/videos/30482518/thumb/1.jpg); } 
+}

@@ -1,0 +1,220 @@
+body{
+	background:rgb(0,0,0);
+	color:white;
+	font-family: 'PT Sans Narrow', sans-serif;}
+#firstbar{
+	text-decoration: none;
+	color:white;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;}
+.bar1{
+	background-color:rgb(33, 34, 36);
+	margin:0px;
+	border:1px;
+	width:100vw;
+	height:60px;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;
+
+	display:flex;
+	flex-direction: row;
+	flex-wrap:nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	/*先定義框(color,margin)*/
+	/*再定義flexbox*/
+	/*-webkit-transition:transform,2s 
+	ease 0.1s;
+	-moz-transition:transform,2s 
+	ease 0.1s;*/}
+.bar1:hover{
+	/*transform:scale(
+		1.05);*/}
+.bar11{
+	background-color:rgb(33, 34, 36);
+	margin:0px;
+	border:1px;
+	width:100vw;
+	height:60px;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;
+
+	display:flex;
+	flex-direction: row;
+	flex-wrap:nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;}
+.bar12{
+	background-color:rgb(33, 34, 36);
+	margin:0px;
+	border:1px;
+	width:100vw;
+	height:60px;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;
+
+	display:flex;
+	flex-direction: row;
+	flex-wrap:nowrap;
+	justify-content: space-between;
+	align-items: flex-end;}
+.barblock1{
+	background: rgb(59, 62, 69);
+	color:white;
+	font-size:27px;
+	text-align:center;
+	width:15vw;
+	line-height:50px;
+	margin:5px;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;
+
+	-webkit-transition:transform,2s 
+	ease 0.1s;
+	-moz-transition:transform,2s 
+	ease 0.1s;}
+.barblock1:hover{
+	transform:scale(
+		1.05);}
+.barblock2{
+	background: rgb(33, 34, 36);
+	color:white;
+	font-size:30px;
+	text-align:center;
+	width:1px;
+	line-height:50px;
+	margin:1px;
+	position:-webkit-sticky;
+	position:sticky; 
+	z-index: 99;
+	top:0;
+
+	-webkit-transition:transform,2s 
+	ease 0.1s;
+	-moz-transition:transform,2s 
+	ease 0.1s;}
+.barblock2:hover{
+	transform:scale(
+		1.05);}
+#barline{
+	position:-webkit-fixed;
+	position:fixed; 
+	z-index: 99;
+	top:64px;
+	width:100vw;
+	border:1px solid white;}
+#secondpage{
+	text-decoration: none;
+	width:100vw;
+	height:55vw;
+	border: 0px solid #000000;
+	padding:0px 0px 0px 0px;
+	margin: 0px 0px;
+	/*background-image:url(https://airbus-h.assetsadobe2.com/is/image/content/dam/corporate-topics/innovation/Innovation-future-technology.jpg?wid=1920&fit=fit,1&qlt=85,0);
+	*/
+	/*background-image:url(https://techcrunch.com/wp-content/uploads/2015/04/codecode.jpg);
+	*/	
+	background-image:linear-gradient(
+		rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://image.freepik.com/free-vector/cloud-computing-concept-abstract-cloud-connection-technology-background_43778-489.jpg);
+	/*background-image:linear-gradient(
+		rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(https://image.freepik.com/free-vector/cloud-computing-concept-abstract-cloud-connection-technology-background_43778-489.jpg);
+	*//*Skills on how to darken an image*/
+	background-repeat:no-repeat;
+	background-size: contain;
+    background-size:100vw;
+	-webkit-transform:background 1 ease 0.1 ;}
+#secondpage:hover{
+	background-image:linear-gradient(
+		rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(https://hackernoon.com/hn-images/1*6W5eurFhYPpwNbRbqNImgQ.jpeg);
+	}
+#page2line1{
+	text-decoration: none;
+	text-align:center;
+	font-size:7vw;
+	background-color:red;
+	background-image:linear-gradient(45deg,
+	rgba(163, 43, 255,1),
+	rgba(43, 50, 255,1),rgba(43, 255, 167,1));
+	text-shadow: 1px 1px 20px white; 
+	font-weight: 700;
+	background-size:100%
+	background-repeat:repeat;
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+	-moz-background-clip:text;
+	-moz-text-fill-color:transparent;}
+.bigger9vw{
+	font-size:
+	9vw;}
+#page2line2{
+	text-decoration: none;
+	text-align:center;
+	font-size:5vw;
+	background-color:red;
+	background-image:linear-gradient(45deg,
+	rgba(163, 43, 255,1),
+	rgba(43, 50, 255,1),rgba(43, 255, 167,1));
+	text-shadow: 1px 1px 20px white; 
+	font-weight: 700;
+	background-size:100%
+	background-repeat:repeat;
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+	-moz-background-clip:text;
+	-moz-text-fill-color:transparent;}
+.bigger7vw{
+	font-size:
+	7vw;}
+#secondpage{
+	-webkit-transition: transform, 2s ease 
+	0.1s;
+	-moz-transition: transform 2s ease 
+	0.1s;
+	/*如果要set動畫，便要先從src set邊D野要變*/}
+#secondpage:hover{
+	transform:
+	scale(1.1);}
+#video{
+	width:100vw;
+	height:56.25vw;
+	/*width="560" height="315"*/
+}
+#page5-table{
+	width:
+	400px;}
+#page5-headline{
+	text-decoration: 
+	underline;}
+#page5-button{
+	background-color: rgb(60,60,60);
+	color:white;
+	padding: 3px 5px;
+	border: 3px double rgb(255,255,255);}
+#page5-button:hover{
+	background-color:rgb(40,40,40);
+	padding: 5px 7px;}
+#page5-button:active{
+	background-color:rgb(250,40,40);
+	padding: 5px 7px;}
+a:link{
+	text-decoration: 
+	none}
+a:visited {
+  text-decoration: 
+  none;}
+a:hover {
+	text-decoration: 
+  none}
+a:active {
+  text-decoration: 
+  none;}
