@@ -22,7 +22,6 @@ function varifybutton2(){
     readTextFile("../Project/password.json", function(text){
         var data = JSON.parse(text);
         var datainstring = text;
-        console.log(datainstring);
         // console.log(data);
     });
     document.getElementById("page5-button").innerHTML ="Verify (" + varifytime + "s)";
