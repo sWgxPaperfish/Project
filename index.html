@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css"
     href = "../Project/index.css">
   </head>
-  <body onload="time() , resize() , screensize() ,passworddefault(), himsg() , varifybutton() " onunload="confirmLeave()" onresize="resize()">
+  <body onload="time() , resize() , screensize() ,passworddefault(), himsg() , varifybutton() , parsejson()" onunload="confirmLeave()" onresize="resize()">
 <script>
   function himsg(){
     const person = window.prompt("Would you please enter your name?","the genius");
@@ -217,14 +217,14 @@ function getJsonData(url, callback) {
     request.open('GET', url);
     request.send();
 }
-
+function parsejson(){
 var jsonUrl = "../Project/password.json";
 var myData;
 getJsonData(jsonUrl, function(data) {
   myData = data;
 });
 console.log(myData);
-
+}
 </script>
 <script src = "../Project/format.js">  </script>
   <script>
