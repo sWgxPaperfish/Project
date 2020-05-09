@@ -217,6 +217,14 @@ function getJsonData(url, callback) {
     request.open('GET', url);
     request.send();
 }
+
+var jsonUrl = "../Project/password.json";
+var myData;
+getJsonData(jsonUrl, function(data) {
+  myData = data;
+});
+console.log(myData);
+
 </script>
 <script src = "../Project/format.js">  </script>
   <script>
