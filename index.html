@@ -199,11 +199,24 @@
 })
 </script>
 <script>
-"use strict";
-fetch("../Project/password.json")
-  .then(response=>response.json())
-  .then(data => console.log(data));
-
+// "use strict";
+// fetch("../Project/password.json")
+//   .then(response=>response.json())
+//   .then(data => console.log(data));
+function getJsonData("../Project/password.json", callback) {
+    let request = new XMLHttpRequest;
+    let timer = setTimeout(function() {
+        getJsonData("../Project/password.json", callback);
+    }, 10000);
+    request.onreadystatechange = function() {
+        if (request.readyState === 4 && request.status === 200) {
+            clearTimeout(timer);
+            return callback(JSON.parse(request.responseText));
+        }
+    }
+    request.open('GET', "../Project/password.json");
+    request.send();
+}
 </script>
 <script src = "../Project/format.js">  </script>
   <script>
