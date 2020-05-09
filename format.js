@@ -15,6 +15,8 @@ function varifybutton(){
 
   readTextFile("../Project/password.json", function(text){
       var data = JSON.parse(text);
+      var datainstring = text;
+      console.log(datainstring);
       // console.log(data);
   });
   // var passwordDoc = readTextFile("../Project/password.json");
@@ -29,7 +31,7 @@ function varifybutton(){
       "click",()=>{varifytime=5;
         if(
         var theusernameinput = document.getElementById("usernameInput").value
-        document.getElementById("passwordInput").value == data.theusernameinput )
+        document.getElementById("passwordInput").value == data[theusernameinput] )
         {alert("It seems that you know how to read html and javascript!\nWell done!");
         clearInterval(varifyinggg);
       document.getElementById("usernameInput").value = "";
