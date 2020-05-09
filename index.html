@@ -203,29 +203,49 @@
 // fetch("../Project/password.json")
 //   .then(response=>response.json())
 //   .then(data => console.log(data));
-function getJsonData(url, callback) {
-    let request = new XMLHttpRequest;
-    let timer = setTimeout(function() {
-        getJsonData(url, callback);
-    }, 10000);
-    request.onreadystatechange = function() {
-        if (request.readyState === 4 && request.status === 200) {
-            clearTimeout(timer);
-            return callback(JSON.parse(request.responseText));
+
+// function getJsonData(url, callback) {
+//     let request = new XMLHttpRequest;
+//     let timer = setTimeout(function() {
+//         getJsonData(url, callback);
+//     }, 10000);
+//     request.onreadystatechange = function() {
+//         if (request.readyState === 4 && request.status === 200) {
+//             clearTimeout(timer);
+//             return callback(JSON.parse(request.responseText));
+//         }
+//     }
+//     request.open('GET', url);
+//     request.send();
+// }
+// function parsejson(){
+// var jsonUrl = "../Project/password.json";
+// var myData;
+// getJsonData(jsonUrl, function(data) {
+//   myData = data;
+// });
+// console.log(myData);
+// }
+
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
         }
     }
-    request.open('GET', url);
-    request.send();
+    rawFile.send(null);
 }
-function parsejson(){
-var jsonUrl = "../Project/password.json";
-var myData;
-getJsonData(jsonUrl, function(data) {
-  myData = data;
+
+//usage:
+readTextFile("../Project/password.json", function(text){
+    var data = JSON.parse(text);
+    console.log(data);
 });
-console.log(myData.usernameee);
-}
 </script>
+
 <script src = "../Project/format.js">  </script>
   <script>
   document.getElementById("page5-button").addEventListener("click",()=>{
