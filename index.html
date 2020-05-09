@@ -201,12 +201,8 @@
 <script>
 "use strict";
 fetch("../Project/password.json")
-  .then(function(resp){
-    return resp.json();
-  })
-  .then(function(data){
-    console.log(data);
-  })
+  .then(response=>response.json())
+  .then(data => console.log(data));
 
 </script>
 <script src = "../Project/format.js">  </script>
@@ -292,14 +288,7 @@ fetch("../Project/password.json")
     // window.resizeTo();
   }
   </script>
-<!-- <script>
-function setCookie(cname, cvalue, exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  var expires = "expires="+ d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-</script>
+<!--
 <script>
 function getCookie(cname) {
 var name = cname + "=";
