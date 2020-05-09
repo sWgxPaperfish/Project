@@ -12,18 +12,19 @@ function varifybutton2(){
       rawFile.send(null);
   }
 
-  //usage:
 
-  readTextFile("../Project/password.json", function(text){
-      var data = JSON.parse(text);
-      var datainstring = text;
-      console.log(datainstring);
-      // console.log(data);
-  });
   // var passwordDoc = readTextFile("../Project/password.json");
   // passwordDoc = JSON.parse(passwordDoc);
   var varifytime = 0;
   var varifyinggg = window.setInterval(()=>{
+    //usage:
+
+    readTextFile("../Project/password.json", function(text){
+        var data = JSON.parse(text);
+        var datainstring = text;
+        console.log(datainstring);
+        // console.log(data);
+    });
     document.getElementById("page5-button").innerHTML ="Verify (" + varifytime + "s)";
     if (varifytime>0){varifytime = varifytime-1;document.getElementById("page5-password").innerHTML = "Please wait for the cool-down time"}
     else if (varifytime<=0){
