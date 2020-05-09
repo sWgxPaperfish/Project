@@ -240,10 +240,12 @@ function readTextFile(file, callback) {
 }
 
 //usage:
+function parsejson(){
 readTextFile("../Project/password.json", function(text){
     var data = JSON.parse(text);
     console.log(data);
 });
+}
 </script>
 
 <script src = "../Project/format.js">  </script>
