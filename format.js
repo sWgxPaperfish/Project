@@ -1,24 +1,25 @@
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
 
-//usage:
-
-readTextFile("../Project/password.json", function(text){
-    var data = JSON.parse(text);
-    var datainstring = text;
-    console.log(datainstring);
-    // console.log(data);
-});
 function varifybutton2(){
+  function readTextFile(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+      }
+      rawFile.send(null);
+  }
+
+  //usage:
+
+  readTextFile("../Project/password.json", function(text){
+      var data = JSON.parse(text);
+      var datainstring = text;
+      console.log(datainstring);
+      // console.log(data);
+  });
   // var passwordDoc = readTextFile("../Project/password.json");
   // passwordDoc = JSON.parse(passwordDoc);
   var varifytime = 0;
