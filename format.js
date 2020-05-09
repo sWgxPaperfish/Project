@@ -18,7 +18,7 @@ function varifybutton2(){
       var datainstring = text;
       // console.log(data);
   });
-
+console.log(data);
   var varifytime = 0;
   var varifyinggg = window.setInterval(()=>{
 
@@ -29,13 +29,6 @@ function varifybutton2(){
       document.getElementById("page5-button").addEventListener(
       "click",()=>{varifytime=5;
         var theusernameinput = document.getElementById("usernameInput").value;
-        //usage:
-
-        readTextFile("../Project/password.json", function(text){
-            var data = JSON.parse(text);
-            var datainstring = text;
-            // console.log(data);
-        });
         if( document.getElementById("passwordInput").value == data[theusernameinput] )
         {alert("It seems that you know how to read html and javascript!\nWell done!");
         clearInterval(varifyinggg);
