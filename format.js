@@ -12,12 +12,11 @@ function varifybutton(){
   }
 
   //usage:
-  function parsejson(){
+
   readTextFile("../Project/password.json", function(text){
       var data = JSON.parse(text);
       // console.log(data);
   });
-  }
   // var passwordDoc = readTextFile("../Project/password.json");
   // passwordDoc = JSON.parse(passwordDoc);
   var varifytime = 0;
