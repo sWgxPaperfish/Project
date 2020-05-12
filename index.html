@@ -46,36 +46,42 @@
   // window.onbeforeunload = confirmLeave();
   </script>
     <div class="bar1">
-      <div class="bar11">
+      <span style="order:1;
+      flex-grow:1;flex-shrink:1;flex-basis:100px;
+      align-self:center">
         <a id="firstbar" href="../Project/index.html">
-          <div class="barblock1" style="order:1";
-          flex-grow:0;flex-shrink:1;flex-basis:80px;
-          align-self:center>
-          Home</div></a>
+          <div class="barblock1">
+          Home</div></a></span>
+      <span style="order:2;
+      flex-grow:1;flex-shrink:1;flex-basis:100px;
+      align-self:center">
           <a id="firstbar" href="https://www.google.com/search?q=colour+picker&oq=colou&aqs=chrome.0.69i59j69i57j0l4j69i60l2.3099j0j9&sourceid=chrome&ie=UTF-8"
           target="_blank">
-            <div class="barblock1" style="order:2";
-            flex-grow:0;flex-shrink:1;flex-basis:80px;
-            align-self:center>
-            Calendar</div></a>
-      </div>
-      <div class="bar12">
+            <div class="barblock1">
+            Calendar</div></a></span>
+      <span style="order:3;
+      flex-grow:10;flex-shrink:1;flex-basis:1px;
+      align-self:center">
+          <div class="barblockempty">‎‎‏‏‎ ‎</div></span>
+      <span style="order:4;
+      flex-grow:1;flex-shrink:1;flex-basis:100px;
+      align-self:center">
         <a id="firstbar" href="http://www.google.com" target="_blank">
-          <div class="barblock1" style="order:4";
-          flex-grow:0;flex-shrink:1;flex-basis:80px;
-          align-self:center>
-          Google</div></a>
+          <div class="barblock1">
+          Google</div></a></span>
+      <span style="order:5;
+      flex-grow:1;flex-shrink:1;flex-basis:100px;
+      align-self:center">
           <a id="firstbar" href="http://www.plktytc.edu.hk" target="_blank">
-            <div class="barblock1" style="order:5";
-            flex-grow:0;flex-shrink:1;flex-basis:80px;
-            align-self:center>
-            TYT</div></a>
+            <div class="barblock1">
+            TYT</div></a></span>
+      <span style="order:6;
+      flex-grow:1;flex-shrink:1;flex-basis:100px;
+      align-self:center">
           <a id="firstbar" href="#" target="_blank">
-            <div class="barblock1" style="order:6";
-            flex-grow:0;flex-shrink:1;flex-basis:80px;
-            align-self:center>
-            Codes</div></a>
-        </div>
+            <div class="barblock1">
+            Codes</div></a></span>
+
         <!-- Notes on FlexBox -->
           <!-- flex-grow:[int]
           default=0; the larger the flex-grow value,
@@ -124,35 +130,34 @@
     <hr>
     <div>
     <div class="page3-grid-container">
-      <a href="../Project/index.html" target="_blank"> <div class="grid-item-chinese"><span id=grid-chinese-word>
-      中文</span></div></a>
-      <a href="../Project/index.html" target="_blank"> <div class="grid-item-english"><span id=grid-english-word>
-      English</span></div></a>
-      <a href="../Project/index.html" target="_blank"> <div class="grid-item-ls"><span id=grid-ls-word>
-      Liberal</span> <span id="grid-ls-word2">Studies</span></div></a>
-      <a href="../Project/maths.html" target="_blank"> <div class="grid-item-maths"><span id=grid-maths-word>
-      Mathematics</span></div></a>
-      <a href="../Project/index.html" target="_blank"> <div class="grid-item-chemistry"><span id=grid-chemistry-word>
-      Chemistry</span></div></a>
-      <a href="../Project/index.html" target="_blank"> <div class="grid-item-physics"><span id=grid-physics-word>
-      Physics</span></div></a>
-      <a href="../Project/index.html" target="_blank"> <div class="grid-item-biology"><span id=grid-biology-word>
-      Biology</span></div></a>
-      <a href="../Project/index.html" target="_blank"> <div class="grid-item-m2"><span id=grid-m2-word>
-      Mathematics</span> <span id="grid-m2-word2">Module 2</span></div></a>
-      <a href="../Project/index.html" target="_blank"> <div class="grid-item-economics"><span id=grid-economics-word>
-      Economics</span></div></a>
-      <a href="../Project/games.html" target="_blank"> <div class="grid-item-games"><span id=grid-games-word>
-      Games</span></div></a>
-      <a href="../Project/programming.html" target="_blank"><div class="grid-item-program"><span id="grid-program-word">
-      Programming</span></div></a>
+      <span class="gridchin"><a href="../Project/index.html" target="_blank"> <div class="grid-item-chinese"><span id=grid-chinese-word>
+      中文</span></div></a></span>
+      <span class="grideng"><a href="../Project/index.html" target="_blank"> <div class="grid-item-english"><span id=grid-english-word>
+      English</span></div></a></span>
+      <span class="gridls"><a href="../Project/index.html" target="_blank"> <div class="grid-item-ls"><span id=grid-ls-word>
+      Liberal</span> <span id="grid-ls-word2">Studies</span></div></a></span>
+      <span class="gridmaths"><a href="../Project/maths.html" target="_blank"> <div class="grid-item-maths"><span id=grid-maths-word>
+      Mathematics</span></div></a></span>
+      <span class="gridchem"><a href="../Project/index.html" target="_blank"> <div class="grid-item-chemistry"><span id=grid-chemistry-word>
+      Chemistry</span></div></a></span>
+      <span class="gridphy"><a href="../Project/index.html" target="_blank"> <div class="grid-item-physics"><span id=grid-physics-word>
+      Physics</span></div></a></span>
+      <span class="gridbio"><a href="../Project/index.html" target="_blank"> <div class="grid-item-biology"><span id=grid-biology-word>
+      Biology</span></div></a></span>
+      <span class="gridm2"><a href="../Project/index.html" target="_blank"> <div class="grid-item-m2"><span id=grid-m2-word>
+      Mathematics</span> <span id="grid-m2-word2">Module 2</span></div></a></span>
+      <span class="gridecon"><a href="../Project/index.html" target="_blank"> <div class="grid-item-economics"><span id=grid-economics-word>
+      Economics</span></div></a></span>
+      <span class="gridgames"><a href="../Project/games.html" target="_blank"> <div class="grid-item-games"><span id=grid-games-word>
+      Games</span></div></a></span>
+      <span class="gridprog"><a href="../Project/programming.html" target="_blank"><div class="grid-item-program"><span id="grid-program-word">
+      Programming</span></div></a></span>
+      <span class="gridcpp"><a href="../Project/javascript.html"> <div class="grid-item-cpp"><span id=grid-cpp-word>
+      </span></div></a></span>
+      <span class="gridcss"><a href="../Project/index.html"> <div class="grid-item-css" ><span id=grid-css-word>
+      </span></div></a></span>
     </div>
-    <div class="page32-grid-container">
-      <a href="../Project/javascript.html"> <div class="grid-item-cpp"><span id=grid-cpp-word>
-      </span></div></a>
-      <a href="../Project/index.html"> <div class="grid-item-css" ><span id=grid-css-word>
-      </span></div></a>
-    </div>
+
     <hr>
     <div class="page4-grid-container">
       <div>What you will learn in Physics: Heat and Gases, Force and Motion, Wave Motions, Electromagnetism, Radioactivity, Astronomy, Atomic World </div>

@@ -15,36 +15,42 @@
   <body onload="time() , resize() , screensize()  " onresize="resize()">
 
     <div class="bar1">
-      <div class="bar11">
+      <span style="order:1;
+      flex-grow:1;flex-shrink:1;flex-basis:100px;
+      align-self:center">
         <a id="firstbar" href="../Project/index.html">
-          <div class="barblock1" style="order:1";
-          flex-grow:0;flex-shrink:1;flex-basis:80px;
-          align-self:center>
-          Home</div></a>
+          <div class="barblock1">
+          Home</div></a></span>
+      <span style="order:2;
+      flex-grow:1;flex-shrink:1;flex-basis:100px;
+      align-self:center">
           <a id="firstbar" href="https://www.google.com/search?q=colour+picker&oq=colou&aqs=chrome.0.69i59j69i57j0l4j69i60l2.3099j0j9&sourceid=chrome&ie=UTF-8"
           target="_blank">
-            <div class="barblock1" style="order:2";
-            flex-grow:0;flex-shrink:1;flex-basis:80px;
-            align-self:center>
-            Calendar</div></a>
-      </div>
-      <div class="bar12">
+            <div class="barblock1">
+            Calendar</div></a></span>
+      <span style="order:3;
+      flex-grow:10;flex-shrink:1;flex-basis:1px;
+      align-self:center">
+          <div class="barblockempty">‎‎‏‏‎ ‎</div></span>
+      <span style="order:4;
+      flex-grow:1;flex-shrink:1;flex-basis:100px;
+      align-self:center">
         <a id="firstbar" href="http://www.google.com" target="_blank">
-          <div class="barblock1" style="order:4";
-          flex-grow:0;flex-shrink:1;flex-basis:80px;
-          align-self:center>
-          Google</div></a>
+          <div class="barblock1">
+          Google</div></a></span>
+      <span style="order:5;
+      flex-grow:1;flex-shrink:1;flex-basis:100px;
+      align-self:center">
           <a id="firstbar" href="http://www.plktytc.edu.hk" target="_blank">
-            <div class="barblock1" style="order:5";
-            flex-grow:0;flex-shrink:1;flex-basis:80px;
-            align-self:center>
-            TYT</div></a>
+            <div class="barblock1">
+            TYT</div></a></span>
+      <span style="order:6;
+      flex-grow:1;flex-shrink:1;flex-basis:100px;
+      align-self:center">
           <a id="firstbar" href="#" target="_blank">
-            <div class="barblock1" style="order:6";
-            flex-grow:0;flex-shrink:1;flex-basis:80px;
-            align-self:center>
-            Codes</div></a>
-        </div>
+            <div class="barblock1">
+            Codes</div></a></span>
+
         <!-- Notes on FlexBox -->
           <!-- flex-grow:[int]
           default=0; the larger the flex-grow value,
@@ -158,19 +164,37 @@ document.getElementById("inputByUsers").value = "";
   </tr>
 </table>
 <div style="background-image:url(https://cdn.shopify.com/s/files/1/1061/1924/products/10_grande.png?v=1571606116);
-width:40vw; height:40vw; background-size:contain; position:fixed; display:none; top:20vh; z-index:99;" id="oooops"> </div>
+width:37.5vw; height:38.4vw; background-size:contain; position:fixed; display:none; top:20vh; z-index:99;" id="oooops"> </div>
 </div>
 <div style="background-image:url(https://pyxis.nymag.com/v1/imgs/5d5/360/c37e550aeeb3127544d3aea284654eccf8.2x.rsocial.w600.jpg);
-width:50vw; height:25vw; background-size:contain; position:fixed; display:none; top:20vh; z-index:99;" id="21pts"> </div>
+width:50vw; height:25vw; background-size:contain; position:fixed; display:none; top:20vh; z-index:99;" id="lessthan21pts"> </div>
 </div>
-
+<div style="background-image:url(https://www.casino.org/blog/wp-content/uploads/online-Blackjack.jpg);
+width:50vw; height:33.3vw; background-size:contain; position:fixed; display:none; top:20vh; z-index:99;" id="21pts"> </div>
+</div>
 <script>
 var totalnumber = 0;
 var trialnumber = 0;
-var cardarray = [1];
+var boomingornot = 0;
+var cardarray = [];
+var totalplayingtimes = 0;
 function newcarding(){
   if (trialnumber<=4){
-  var newcard = Math.floor((Math.random() * 13) + 1);
+      var newcard = Math.floor((Math.random() * 13) + 1);
+
+      if (trialnumber >=2){
+        try{
+      var cardarray3 = cardarray;
+      let reducer = (accumulator,currentValue)=> accumulator + currentValue;
+      var boomingornot = cardarray3.reduce(reducer);
+    }catch{}
+    if(totalplayingtimes%4==0 && newcard + boomingornot > 21&&boomingornot!=21){
+        while (newcard + boomingornot >21){
+          newcard = Math.floor((Math.random() * 13) + 1);
+        }
+      }}
+
+
   // trialnumber++;
   switch(trialnumber){
     case 0:
@@ -338,41 +362,54 @@ function counting(){
         var forchecking21pts = cardarray.reduce(reducer);
         document.getElementById("coutsumOfNum").innerHTML = forchecking21pts;
       }else{
-        var a=0;
-        for (i=-1;i<0;i=()=>cardarray.find(1,i+1)) {
-          if (()=>cardarray.find(1,i+1) > i){a++}else{i=-10}
-        }console.log(a)
-        var sumofthearray = 0;
-        for (i=0;i<trialnumber;i++){
-        sumofthearray += cardarray[i]
+        var a=-1;var e;var n=0;
+        for(var i=0;n!="-1";i=i){
+          a++;
+          n=cardarray.indexOf(1,i);
+          i=cardarray.indexOf(1,i)+1;
         }
-        if (sumofthearray == 21){forchecking21pts = 21}else{
-        sumofthearray = sumofthearray -9
-          if ( sumofthearray == 21 ||a==1){forchecking21pts =sumofthearray}
-          else {sumofthearray-9
-            if(sumofthearray ==21 || a==2){forchecking21pts = sumofthearray}
-              else {sumofthearray-9
-              if (sumofthearray == 21 || a==3){forchecking21pts = sumofthearray}
-                else {sumofthearray - 9;
-                  if (sumofthearray == 21 || a==4){forchecking21pts=sumofthearray}
-                    else {forchecking21pts = sumofthearray-9}
+        let reducer = (accumulator,currentValue)=> accumulator + currentValue;
+        var forchecking21pts = cardarray.reduce(reducer);
+        if (forchecking21pts == 21||forchecking21pts+10>21){
+          document.getElementById("coutsumOfNum").innerHTML = forchecking21pts}else{
+        forchecking21pts = forchecking21pts +10
+          if ( forchecking21pts == 21 ||a==1||forchecking21pts+10>21){
+          document.getElementById("coutsumOfNum").innerHTML =forchecking21pts}
+          else {forchecking21pts = forchecking21pts + 10
+            if(forchecking21pts ==21 || a==2||forchecking21pts+10>21){
+              document.getElementById("coutsumOfNum").innerHTML = forchecking21pts}
+              else {forchecking21pts = forchecking21pts + 10;
+              if (forchecking21pts == 21 || a==3||forchecking21pts+10>21){
+                document.getElementById("coutsumOfNum").innerHTML = forchecking21pts}
+                else {forchecking21pts = forchecking21pts + 10;
+                  if (forchecking21pts == 21 || a==4 ||forchecking21pts+10>21){
+                    document.getElementById("coutsumOfNum").innerHTML=forchecking21pts}
+                    else {
+                      document.getElementById("coutsumOfNum").innerHTML = forchecking21pts+10
+                    }
                 }
               }
             }
           }
+
         }
       }
 
   if (forchecking21pts > 21 ){
     ooops();
-  }else{
+  }else if(forchecking21pts < 21){
     ohgood();
+  }else{
+    fantastic();
   }
 }
+var totalplayingtimes = 0;
 function reseting(){
+  totalplayingtimes++
   cardarray = []
   totalnumber = 0;
   trialnumber= 0 ;
+
   document.getElementById("playerside2").style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);background-size:contain;"
   document.getElementById("playerside1").style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);background-size:contain;"
   document.getElementById("playerside3").style="width:11vw; height:15vw;background-image:url(https://i.pinimg.com/originals/4d/40/95/4d4095cc1994dfda327e2856d0a8c203.jpg);background-size:contain;"
@@ -387,33 +424,61 @@ function ooops (){
   if (noDoubleclick ==1){
   noDoubleclick = 0;
   document.getElementById("oooops").style.display = "inline" ;
-  var element = document.getElementById("oooops");
-  var position = 0;
-  var animationloop = setInterval(()=>{
+  let element = document.getElementById("oooops");
+  let position = 0;
+  let animationloop = setInterval(()=>{
     if (position >= 100){
       clearInterval(animationloop);
       element.style.left = 0 + "px";
       noDoubleclick = 1;
-      element.style.display = "none";}else{
+      element.style.display = "none";
+    }else{
       position++;
       element.style.left = position + "vw"
     }
   },15)
 }
 }
+var noDoubleclick2 = 1
   function ohgood (){
-    document.getElementById("21pts").style.display = "inline" ;
-    var element = document.getElementById("21pts");
-    var position = 0;
-    var animationloop = setInterval(()=>{
+    if (noDoubleclick2 ==1){
+    noDoubleclick2 = 0;
+    document.getElementById("lessthan21pts").style.display = "inline" ;
+    let element = document.getElementById("lessthan21pts");
+    let position = 0;
+    let animationloop = setInterval(()=>{
       if (position >= 100){
         clearInterval(animationloop);
-        element.style.display = "none";}else{
+        element.style.left = 0 + "px";
+        noDoubleclick2 = 1;
+        element.style.display = "none";
+      }else{
         position++;
         element.style.left = position + "vw"
       }
     },15)
-}
+  }
+  }
+  var noDoubleclick3 = 1
+    function fantastic (){
+      if (noDoubleclick3 ==1){
+      noDoubleclick3 = 0;
+      document.getElementById("21pts").style.display = "inline" ;
+      let element = document.getElementById("21pts");
+      let position = 0;
+      let animationloop = setInterval(()=>{
+        if (position >= 100){
+          clearInterval(animationloop);
+          element.style.left = 0 + "px";
+          noDoubleclick3 = 1;
+          element.style.display = "none";
+        }else{
+          position++;
+          element.style.left = position + "vw"
+        }
+      },15)
+    }
+    }
 function newcardColorHover(){
   document.getElementById("newCardBtn").style.backgroundColor = "rgba(120,120,120,1)";
 }
@@ -444,7 +509,7 @@ function resetColorHover2(){
 <div id="bombaimage" style="background:url(https://i1.wp.com/asiatimes.com/wp-content/uploads/2017/09/Atomic-Bomb-e1577489338694.jpg);
 position:fixed ; bottom:10vw;right:0vw ;width:99vw;height:57vw;background-size:contain;z-index:99;border: 3px solid white;display:none;"> </div>
 <script>
-  function changingwords (){ console.log("changingwords");
+  function changingwords (){
     switch(document.getElementById("showingbutton").innerHTML){
   case "Thank You!":document.getElementById("showingbutton").innerHTML = "Enough!"
   break;
@@ -457,7 +522,8 @@ position:fixed ; bottom:10vw;right:0vw ;width:99vw;height:57vw;background-size:c
   break;
 }}</script>
 <script>
-  function changingwords2 (){  console.log("changingwords2");switch(document.getElementById("bombbutton").innerHTML){
+  function changingwords2 (){
+    switch(document.getElementById("bombbutton").innerHTML){
   case "I'm a bomb":document.getElementById("bombbutton").innerHTML = "Behave yrself!";
   document.getElementById("bombbutton").style = "font-size:3.5vw; background-color:yellow ; color:black; width:20vw; height:8vw; text-align:center; line-height:8vw";
   break;
